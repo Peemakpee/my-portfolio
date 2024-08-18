@@ -16,7 +16,7 @@ module.exports = {
         "secondary-light": "#FFFFFF",
         "ternary-light": "#f6f7f8",
 
-        "primary-dark": "#0D2438",
+        "primary-dark": "#224c8d",
         "secondary-dark": "#102D44",
         "ternary-dark": "#1E3851",
       },

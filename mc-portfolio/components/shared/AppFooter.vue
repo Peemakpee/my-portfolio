@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-gray-800 text-white p-4 text-center">
+    <footer class="text-white p-4 text-center">
         <p>&copy; 2024 My Portfolio. All rights reserved.</p>
     </footer>
 </template>
