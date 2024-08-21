@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   // Global page headers
   app: {
     head: {
-      title: "Stoman Portfolio",
+      title: "Mc Portfolio",
       htmlAttrs: {
         lang: "en",
       },
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
         { hid: "description", name: "description", content: "" },
         { name: "format-detection", content: "telephone=no" },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
+      link: [{ rel: "icon", type: "image/png", href: "/favicon.png?v=2" }],
     },
   },
 

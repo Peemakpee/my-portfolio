@@ -117,17 +117,17 @@
 
                                     <div class="mt-6 pb-4 sm:pb-1">
                                         <Button title="Send Request" class="
-                          px-4
-                          sm:px-6
-                          py-2
-                          sm:py-2.5
-                          text-white
-                          bg-indigo-500
-                          hover:bg-indigo-600
-                          rounded-md
-                          focus:ring-1 focus:ring-indigo-900
-                          duration-500
-                        " type="submit" aria-label="Submit Request" />
+    px-4
+    sm:px-6
+    py-2
+    sm:py-2.5
+    text-white
+    bg-[#224c8d]
+    hover:bg-[#1a3e70] /* Slightly darker shade for hover effect */
+    rounded-md
+    focus:ring-1 focus:ring-[#224c8d]
+    duration-500
+  " type="submit" aria-label="Submit Request" />
                                     </div>
                                 </form>
                             </div>

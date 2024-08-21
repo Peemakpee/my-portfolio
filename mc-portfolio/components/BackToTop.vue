@@ -10,8 +10,8 @@
           cursor-pointer
           flex
           p-2
-          bg-indigo-500
-          hover:bg-indigo-600
+          bg-[#224c8d]       
+          hover:bg-[#1a3e70] 
           text-white
           items-center
           hover:shadow-sm
@@ -19,7 +19,7 @@
           ring-none
           outline-none
         " @click="backToTop">
-            <i data-feather="chevron-up"></i>
+            <i data-feather="chevron-up" class="text-white"></i> <!-- Updated icon color -->
         </div>
     </transition>
 </template>

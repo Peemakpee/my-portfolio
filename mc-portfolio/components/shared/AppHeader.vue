@@ -112,17 +112,20 @@ function showModal() {
                 <!-- Hire me button -->
                 <div class="font-general-medium hidden md:block">
                     <button class="
-              text-md
-              bg-indigo-500
-              hover:bg-indigo-600
-              text-white
-              shadow-sm
-              rounded-md
-              px-5
-              py-2.5
-            " @click="showModal" aria-label="Hire Me Button">
+  px-4
+  sm:px-6
+  py-2
+  sm:py-2.5
+  text-white
+  bg-[#224c8d]
+  hover:bg-[#1a3e70] /* Slightly darker shade for hover effect */
+  rounded-md
+  focus:ring-1 focus:ring-[#224c8d]
+  duration-500
+" @click="showModal" aria-label="Hire Me Button">
                         Hire Me
                     </button>
+
                 </div>
 
                 <!-- Theme switcher large screen -->
