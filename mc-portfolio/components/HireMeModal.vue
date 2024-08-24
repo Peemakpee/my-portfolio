@@ -38,10 +38,10 @@
                     border-b border-ternary-light
                     dark:border-ternary-dark
                   ">
-                                <h5 class="text-primary-dark dark:text-primary-light text-xl">
+                                <h5 class="text-secondary-dark dark:text-primary-light text-xl">
                                     What project are you looking for?
                                 </h5>
-                                <button class="px-4 text-primary-dark dark:text-primary-light" @click="showModal">
+                                <button class="px-4 text-secondary-dark dark:text-primary-light" @click="showModal">
                                     <i data-feather="x" class="w-8 sm:w-12"></i>
                                 </button>
                             </div>

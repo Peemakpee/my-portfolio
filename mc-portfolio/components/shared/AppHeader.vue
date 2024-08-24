@@ -1,11 +1,7 @@
 <script setup>
 import { ref } from 'vue';
-import { useStore } from 'vuex';
 import HireMeModal from '../HireMeModal.vue';
 import AppNavigation from './AppNavigation.vue';
-
-// const store = useStore();
-// const categories = computed(() => store.state.categories);
 
 const isOpen = ref(false);
 const modal = ref(false);
@@ -117,7 +113,8 @@ function showModal() {
   py-2
   sm:py-2.5
   text-white
-  bg-[#224c8d]
+  bg-secondary-dark
+  dark:bg-ternary-dark
   hover:bg-[#1a3e70] /* Slightly darker shade for hover effect */
   rounded-md
   focus:ring-1 focus:ring-[#224c8d]

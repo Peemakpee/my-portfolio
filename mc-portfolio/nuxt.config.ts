@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   // Global CSS files
-  css: ['@/assets/css/tailwind.css'],
+  css: ['@/assets/app.css'],
 
   // PostCSS configuration
   postcss: {

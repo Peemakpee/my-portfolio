@@ -1,22 +1,15 @@
 <template>
-    <div class="min-h-screen flex flex-col">
-        <!-- App header -->
-        <AppHeader />
+    <div class="container mx-auto">
+        <AppBanner />
 
-        <!-- Main content -->
-        <transition name="fade" mode="out-in">
-            <Nuxt />
-        </transition>
-
-        <!-- App footer -->
-        <AppFooter />
 
     </div>
 </template>
 
 <script setup>
+import AppBanner from '~/components/shared/AppBanner.vue';
+import Button from "~/components/reusable/Button.vue";
 import { ref } from 'vue';
-
 </script>
 
 <style scoped>
