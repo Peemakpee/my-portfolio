@@ -12,10 +12,10 @@
             </p>
             <div class="flex justify-center sm:block">
                 <a href="/Resume_Cabanes.pdf" download=""
-                    class="flex justify-center items-center w-44 sm:w-56 mt-6 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-secondary-dark hover:dark:bg-ternary-dark text-gray-500 hover:text-white duration-500"
+                    class="flex justify-center items-center w-40 sm:w-48 mt-6 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-secondary-dark hover:dark:bg-ternary-dark text-gray-500 hover:text-white duration-500"
                     aria-label="Download Resume">
-                    <i data-feather="arrow-down-circle" class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"></i>
-                    <span class="text-sm sm:text-lg font-medium duration-100">Download Resume</span>
+                    <i data-feather="arrow-down-circle" class="ml-0 sm:ml-0 mr-2 sm:mr-1 w-5 sm:w-6 duration-100"></i>
+                    <span class="text-sm sm:text-base font-normal duration-100">Download Resume</span>
                 </a>
             </div>
         </div>
