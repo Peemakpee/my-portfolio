@@ -115,7 +115,8 @@ function showModal() {
   text-white
   bg-secondary-dark
   dark:bg-ternary-dark
-  hover:bg-[#1a3e70] /* Slightly darker shade for hover effect */
+  hover:bg-[#1a3e70] 
+  dark:hover:bg-blue-950
   rounded-md
   focus:ring-1 focus:ring-[#224c8d]
   duration-500

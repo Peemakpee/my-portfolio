@@ -2,16 +2,16 @@
 import { defineProps } from 'vue';
 
 const props = defineProps({
-    isOpen: Boolean,
-    showModal: Function,
-    modal: Boolean,
-    categories: Array,
+  isOpen: Boolean,
+  showModal: Function,
+  modal: Boolean,
+  categories: Array,
 });
 </script>
 
 <template>
-    <!-- App header navigation links -->
-    <div :class="isOpen ? 'block' : 'hidden'" class="
+  <!-- App header navigation links -->
+  <div :class="isOpen ? 'block' : 'hidden'" class="
       font-general-regular
       m-0
       sm:ml-4
@@ -24,7 +24,7 @@ const props = defineProps({
       shadow-lg
       sm:shadow-none
     ">
-        <NuxtLink to="/projects" class="
+    <NuxtLink to="/projects" class="
         block
         text-left text-lg text-secondary-dark
         dark:text-ternary-light
@@ -34,7 +34,7 @@ const props = defineProps({
         mb-2
         sm:py-2
       " aria-label="Projects">Projects</NuxtLink>
-        <NuxtLink to="/about" class="
+    <NuxtLink to="/about" class="
         block
         text-left text-lg text-secondary-dark
         dark:text-ternary-light
@@ -49,7 +49,7 @@ const props = defineProps({
         border-primary-light
         dark:border-secondary-dark
       " aria-label="About Me">About Me</NuxtLink>
-        <NuxtLink to="/contact" class="
+    <NuxtLink to="/contact" class="
         block
         text-left text-lg text-secondary-dark
         dark:text-ternary-light
@@ -64,7 +64,7 @@ const props = defineProps({
         border-primary-light
         dark:border-secondary-dark
       " aria-label="Contact">Contact</NuxtLink>
-        <div class="
+    <div class="
         font-general-regular
         border-t-2
         pt-3
@@ -72,7 +72,7 @@ const props = defineProps({
         border-primary-light
         dark:border-secondary-dark
       ">
-            <button class="
+      <button class="
           sm:hidden
           block
           text-left text-md
@@ -85,15 +85,15 @@ const props = defineProps({
           py-2
           mt-2
         " @click="showModal()" aria-label="Hire Me Button">
-                Hire Me
-            </button>
-        </div>
+        Hire Me
+      </button>
     </div>
+  </div>
 </template>
 
 <style>
-#nav .nuxt-link-exact-active,
-#nav .nuxt-link-active {
-    @apply text-indigo-700 dark:text-indigo-400;
+.nuxt-link-exact-active,
+.nuxt-link-active {
+  @apply text-indigo-700 dark:text-indigo-400;
 }
 </style>

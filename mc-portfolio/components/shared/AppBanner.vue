@@ -7,7 +7,7 @@
                 Hi, I am Mc Phy
             </h1>
             <p
-                class="font-general-medium mt-2 text-lg sm:text-xl xl:text-2xl text-center sm:text-left leading-none text-gray-400 dark:text-ternary-dark">
+                class="font-general-medium mt-2 text-lg sm:text-xl xl:text-2xl text-center sm:text-left leading-none text-gray-400 dark:text-gray-400">
                 A Web Developer
             </p>
             <div class="flex justify-center sm:block">

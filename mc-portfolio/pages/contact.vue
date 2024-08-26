@@ -5,18 +5,18 @@ import feather from 'feather-icons';
 const contacts = ref([
     {
         id: 1,
-        name: "Your Address, Your City, Your Country",
+        name: "Feria Street, Calinan, Davao City , Philippines",
         icon: "map-pin",
     },
     {
         id: 2,
-        name: "email@domain.com",
+        name: "cabanesmcphy123@gmail.com",
         icon: "mail",
     },
     {
         id: 3,
-        name: "555 8888 888",
-        icon: "phone",
+        name: "+63 976-537-5605",
+        icon: "smartphone",
     },
 ]);
 
