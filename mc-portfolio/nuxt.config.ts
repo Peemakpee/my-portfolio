@@ -38,6 +38,7 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: "icon", type: "image/png", href: "/favicon.png?v=2" }],
     },
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
 
   // Color mode configuration
