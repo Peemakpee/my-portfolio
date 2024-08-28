@@ -33,13 +33,13 @@ import BackToTop from '~/components/BackToTop.vue';
 }
 
 .fade-enter-active {
-    animation: coming 0.4s;
-    animation-delay: 0.2s;
+    animation: coming 0.2s;
+    animation-delay: 0.1s;
     opacity: 0;
 }
 
 .fade-leave-active {
-    animation: going 0.4s;
+    animation: going 0.2s;
 }
 
 @keyframes going {

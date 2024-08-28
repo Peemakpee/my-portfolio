@@ -25,6 +25,7 @@ export default defineNuxtConfig({
 
   // Global page headers
   app: {
+    pageTransition: { name: 'fade', mode: 'out-in' },
     head: {
       title: "Mc Portfolio",
       htmlAttrs: {
@@ -38,7 +39,6 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: "icon", type: "image/png", href: "/favicon.png?v=2" }],
     },
-    pageTransition: { name: 'page', mode: 'out-in' },
   },
 
   // Color mode configuration

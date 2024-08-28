@@ -2,7 +2,7 @@
     <transition name="fade">
         <div v-show="modal" class="font-general-regular fixed inset-0 z-30">
             <!-- Modal body background as backdrop -->
-            <div v-show="modal" @click="showModal" class="
+            <div v-show="modal" @click="showModal()" class="
             bg-filter bg-black bg-opacity-50
             fixed
             inset-0
@@ -38,15 +38,18 @@
                     border-b border-ternary-light
                     dark:border-ternary-dark
                   ">
-                                <h5 class="text-secondary-dark dark:text-primary-light text-xl">
+                                <h5 class="text-primary-dark dark:text-primary-light text-xl">
                                     What project are you looking for?
                                 </h5>
-                                <button class="px-4 text-secondary-dark dark:text-primary-light" @click="showModal">
+                                <button class="px-4 text-primary-dark dark:text-primary-light" @click="showModal()">
                                     <i data-feather="x" class="w-8 sm:w-12"></i>
                                 </button>
                             </div>
                             <div class="modal-body p-5 w-full h-full">
-                                <form @submit.prevent class="max-w-xl m-4 text-left">
+                                <form @submit="(e) => {
+                                        e.preventDefault;
+                                    }
+                                    " class="max-w-xl m-4 text-left">
                                     <div class="mt-0">
                                         <input class="
                           w-full
@@ -60,7 +63,7 @@
                           dark:bg-ternary-dark
                           text-primary-dark
                           dark:text-ternary-light
-                        " id="name" name="name" type="text" required placeholder="Name" aria-label="Name" />
+                        " id="name" name="name" type="text" required="" placeholder="Name" aria-label="Name" />
                                     </div>
                                     <div class="mt-6">
                                         <input class="
@@ -75,27 +78,31 @@
                           dark:bg-ternary-dark
                           text-primary-dark
                           dark:text-ternary-light
-                        " id="email" name="email" type="text" required placeholder="Email" aria-label="Email" />
+                        " id="email" name="email" type="text" required="" placeholder="Email" aria-label="Email" />
                                     </div>
-                                    <div class="mt-6">
-                                        <select class="
-                          w-full
-                          px-5
-                          py-2
-                          border-1 border-gray-200
-                          dark:border-secondary-dark
-                          rounded-md
-                          text-md
-                          bg-secondary-light
-                          dark:bg-ternary-dark
-                          text-primary-dark
-                          dark:text-ternary-light
-                        " id="subject" name="subject" required aria-label="Project Category">
-                                            <option v-for="category in categories" :key="category.id"
-                                                :value="category.value">
-                                                {{ category.name }}
-                                            </option>
-                                        </select>
+                                    <div class="mt-6 relative">
+                                        <div class="relative">
+                                            <select class="
+                            w-full
+                            px-5
+                            py-2
+                            border-1 border-gray-200
+                            dark:border-secondary-dark
+                            rounded-md
+                            text-md
+                            bg-secondary-light
+                            dark:bg-ternary-dark
+                            text-primary-dark
+                            dark:text-ternary-light
+                          " id="subject" name="subject" type="text" required="" aria-label="Project Category">
+                                                <option v-for="category in categories" :key="category.id"
+                                                    :value="category.value">
+                                                    {{ category.name }}
+                                                </option>
+                                            </select>
+                                            <i data-feather="chevron-down"
+                                                class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-300"></i>
+                                        </div>
                                     </div>
 
                                     <div class="mt-6">
@@ -117,17 +124,19 @@
 
                                     <div class="mt-6 pb-4 sm:pb-1">
                                         <Button title="Send Request" class="
-    px-4
-    sm:px-6
-    py-2
-    sm:py-2.5
-    text-white
-    bg-[#224c8d]
-    hover:bg-[#1a3e70] /* Slightly darker shade for hover effect */
-    rounded-md
-    focus:ring-1 focus:ring-[#224c8d]
-    duration-500
-  " type="submit" aria-label="Submit Request" />
+                          px-4
+                          sm:px-6
+                          py-2
+                          sm:py-2.5
+                          text-white
+                          bg-secondary-dark
+                          dark:bg-ternary-dark
+                          hover:bg-blue-950
+                          dark:hover:bg-secondary-dark
+                          rounded-md
+                          focus:ring-1 focus:ring-indigo-900
+                          duration-500
+                        " type="submit" aria-label="Submit Request" />
                                     </div>
                                 </form>
                             </div>
@@ -145,7 +154,7 @@
                       rounded-md
                       focus:ring-1 focus:ring-indigo-900
                       duration-500
-                    " @click="showModal" aria-label="Close Hire Me Modal" />
+                    " @click="showModal()" aria-label="Close Hire Me Modal" />
                             </div>
                         </div>
                     </div>
@@ -155,10 +164,15 @@
     </transition>
 </template>
 
+
 <script setup>
+import { useCategoryStore } from '@/stores/useCategoryStore';
 import { defineProps, onMounted } from 'vue';
 import feather from 'feather-icons';
 import Button from './reusable/Button.vue';
+
+const store = useCategoryStore();
+const categories = computed(() => store.getCategories);
 
 // Props
 const props = defineProps(['showModal', 'modal', 'categories']);

@@ -16,9 +16,7 @@ onUpdated(() => {
     <div>
         <AboutMe class="container mx-auto" />
 
-        <!-- <AboutCounter />
-
-        <AboutClients class="container mx-auto" /> -->
+        <AboutTechTools class="container mx-auto" />
     </div>
 </template>
 
