@@ -16,6 +16,8 @@ onUpdated(() => {
     <div>
         <AboutMe class="container mx-auto" />
 
+        <ProjectsGrid class="container mx-auto" />
+
         <AboutTechTools class="container mx-auto" />
     </div>
 </template>

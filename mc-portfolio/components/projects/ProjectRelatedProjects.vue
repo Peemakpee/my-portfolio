@@ -8,22 +8,22 @@ const relatedProject = reactive({
         {
             id: 1,
             title: "Mobile UI",
-            img: require('@/static/images/mobile-project-1.jpg'),
+            img: require('@/vbnet/med_care1.png'),
         },
         {
             id: 2,
             title: "Web Application",
-            img: require('@/static/images/web-project-1.jpg'),
+            img: require('@/vbnet/med_care2.png'),
         },
         {
             id: 3,
             title: "UI Design",
-            img: require('@/static/images/ui-project-2.jpg'),
+            img: require('@/vbnet/med_care3.png'),
         },
         {
             id: 4,
             title: "Kabul Mobile App UI",
-            img: require('@/static/images/mobile-project-2.jpg'),
+            img: require('@/vbnet/med_care3.png'),
         },
     ],
 });

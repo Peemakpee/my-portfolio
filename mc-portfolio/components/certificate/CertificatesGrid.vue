@@ -1,37 +1,37 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
-import { useProjectStore } from '@/stores/useProjectStore';
-import ProjectsFilter from '../components/projects/ProjectsFilter.vue';
+import { useCertificateStore } from '@/stores/useCertificateStore';
+import CertificatesFilter from './CertificatesFilter.vue';
 
-const store = useProjectStore();
-const selectedProject = ref('');
-const searchProject = ref('');
+const store = useCertificateStore();
+const selectedCertificate = ref('');
+const searchCertificate = ref('');
 
 // Computed properties
-const projectsHeading = computed(() => store.projectsHeading);
-const projectsDescription = computed(() => store.projectsDescription);
-const projects = computed(() => store.projects);
+const certificatesHeading = computed(() => store.certificatesHeading);
+const certificatesDescription = computed(() => store.certificatesDescription);
+const certificates = computed(() => store.certificates);
 
-const filteredProjects = computed(() => {
-    if (selectedProject.value) {
-        return filterProjectsByCategory();
-    } else if (searchProject.value) {
-        return filterProjectsBySearch();
+const filteredCertificates = computed(() => {
+    if (selectedCertificate.value) {
+        return filterCertificatesByCategory();
+    } else if (searchCertificate.value) {
+        return filterCertificatesBySearch();
     }
-    return projects.value;
+    return certificates.value;
 });
 
 // Methods
-function filterProjectsByCategory() {
-    return projects.value.filter(item => {
+function filterCertificatesByCategory() {
+    return certificates.value.filter(item => {
         let category = item.category.charAt(0).toUpperCase() + item.category.slice(1);
-        return category.includes(selectedProject.value);
+        return category.includes(selectedCertificate.value);
     });
 }
 
-function filterProjectsBySearch() {
-    const project = new RegExp(searchProject.value, 'i');
-    return projects.value.filter(el => el.title.match(project));
+function filterCertificatesBySearch() {
+    const certificate = new RegExp(searchCertificate.value, 'i');
+    return certificates.value.filter(el => el.title.match(certificate));
 }
 
 // Lifecycle hook
@@ -42,7 +42,7 @@ onMounted(() => {
 
 <template>
     <div class="pt-10 sm:pt-20 md:pt-24">
-        <!-- Projects grid header -->
+        <!-- Certificates grid header -->
         <div class="text-center">
             <p class="
           font-general-semibold
@@ -53,15 +53,15 @@ onMounted(() => {
           text-ternary-dark
           dark:text-ternary-light
         ">
-                {{ projectsHeading }}
+                {{ certificatesHeading }}
             </p>
             <!-- Uncomment this if you want to include the description -->
             <!-- <p class="text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
-        {{ projectsDescription }}
+        {{ certificatesDescription }}
       </p> -->
         </div>
 
-        <!-- Filter and search projects -->
+        <!-- Filter and search certificates -->
         <div class="mt-8 sm:mt-10">
             <h3 class="
           font-general-regular
@@ -72,7 +72,7 @@ onMounted(() => {
           font-normal
           mb-4
         ">
-                Search projects by title or filter by category
+                Search certificates by title or filter by category
             </h3>
             <div class="
           flex
@@ -95,7 +95,7 @@ onMounted(() => {
             ">
                         <i data-feather="search" class="text-ternary-dark dark:text-ternary-light"></i>
                     </span>
-                    <input v-model="searchProject" class="
+                    <input v-model="searchCertificate" class="
               font-general-medium
               pl-3
               pr-1
@@ -110,43 +110,43 @@ onMounted(() => {
               dark:bg-ternary-dark
               text-primary-dark
               dark:text-ternary-light
-            " id="name" name="name" type="search" placeholder="Search Projects" aria-label="Name" />
+            " id="name" name="name" type="search" placeholder="Search Certificates" aria-label="Name" />
                 </div>
-                <ProjectsFilter @change="selectedProject = $event" />
+                <CertificatesFilter @change="selectedCertificate = $event" />
             </div>
         </div>
 
-        <!-- Projects grid -->
+        <!-- Certificates grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
-            <div v-for="project in filteredProjects" :key="project.id" class="
-      rounded-xl
-      shadow-lg
-      hover:shadow-xl
-      cursor-pointer
-      mb-10
-      sm:mb-0
-      bg-secondary-light
-      dark:bg-ternary-dark
-    " aria-label="Single Project">
-                <NuxtLink :to="`/projects/${project.id}`">
-                    <div class="flex justify-center">
-                        <img :src="project.img" :alt="project.title" class="rounded-t-xl border-none" />
+            <div v-for="certificate in filteredCertificates" :key="certificate.id" class="
+          rounded-xl
+          shadow-lg
+          hover:shadow-xl
+          cursor-pointer
+          mb-10
+          sm:mb-0
+          bg-secondary-light
+          dark:bg-ternary-dark
+        " aria-label="Single Certificate">
+                <NuxtLink :to="`/certificates/${certificate.id}`">
+                    <div>
+                        <img :src="certificate.img" :alt="certificate.title" class="rounded-t-xl border-none" />
                     </div>
                     <div class="text-center px-4 py-6">
                         <p class="
-            font-general-semibold
-            text-xl text-ternary-dark
-            dark:text-ternary-light
-            font-semibold
-            mb-2
-          ">
-                            {{ project.title }}
+                font-general-semibold
+                text-xl text-ternary-dark
+                dark:text-ternary-light
+                font-semibold
+                mb-2
+              ">
+                            {{ certificate.title }}
                         </p>
                         <span class="
-            font-general-medium
-            text-lg text-ternary-dark
-            dark:text-ternary-light
-          ">{{ project.category }}</span>
+                font-general-medium
+                text-lg text-ternary-dark
+                dark:text-ternary-light
+              ">{{ certificate.category }}</span>
                     </div>
                 </NuxtLink>
             </div>

@@ -12,7 +12,7 @@ export const useProjectStore = defineStore('projectStore', {
                 id: uuidv4(),
                 title: "Google Health Platform",
                 category: "Web Application",
-                img: "images/web-project-2.jpg",
+                img: "projects/vbnet/med_care3.png",
                 publishDate: "Nov 04, 2021",
                 tag: "UI / Frontend",
                 clientTitle: "About Client",
@@ -25,12 +25,12 @@ export const useProjectStore = defineStore('projectStore', {
                     {
                         id: uuidv4(),
                         title: "Uber Project Management UI",
-                        img: "../images/ui-project-1.jpg",
+                        img: "/projects/vbnet/med_care1.png",
                     },
                     {
                         id: uuidv4(),
                         title: "Uber Project Management UI",
-                        img: "../images/web-project-1.jpg",
+                        img: "/projects/vbnet/med_care2.png",
                     },
                 ],
                 companyInfos: [
@@ -63,9 +63,9 @@ export const useProjectStore = defineStore('projectStore', {
             },
             {
                 id: uuidv4(),
-                title: "Phoenix Digital Agency",
+                title: "Diwang App",
                 category: "Mobile Application",
-                img: "images/mobile-project-2.jpg",
+                img: "projects/supabase/btr3.png",
                 publishDate: "Nov 04, 2021",
                 tag: "UI / Frontend",
                 clientTitle: "About Client",
@@ -78,7 +78,7 @@ export const useProjectStore = defineStore('projectStore', {
                     {
                         id: uuidv4(),
                         title: "Phoenix Digital Agency",
-                        img: "../images/mobile-project-1.jpg",
+                        img: "projects/laravel/bible-bliss2.png",
                     },
                 ],
                 companyInfos: [

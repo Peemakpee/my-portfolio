@@ -6,20 +6,20 @@ defineProps({
 
 <template>
     <!-- About single tech tool -->
-    <div>
+    <div class="flex justify-center items-center">
         <a :href="tool.url" target="_blank" rel="noopener noreferrer">
             <img :src="tool.img" :alt="tool.title" class="
-            w-64
-            py-5
-            px-10
-            border border-ternary-light
-            dark:border-ternary-dark
-            shadow-sm
-            rounded-lg
-            mb-8
-            cursor-pointer
-            dark:bg-secondary-light
-          " />
+                    w-32
+                    py-3
+                    px-6
+                    border border-ternary-light
+                    dark:border-ternary-dark
+                    shadow-sm
+                    rounded-lg
+                    mb-2
+                    cursor-pointer
+                    dark:bg-secondary-light
+                " />
         </a>
     </div>
 </template>

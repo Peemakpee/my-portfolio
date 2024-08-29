@@ -1,14 +1,15 @@
 <script setup>
 import { computed, onMounted, onUpdated } from 'vue';
-import { useRoute, useStore } from 'vuex';
+import { useRoute } from '#app';
+import { useProjectStore } from '@/stores/useProjectStore';
 import feather from 'feather-icons';
 import ProjectRelatedProjects from '../../components/projects/ProjectRelatedProjects.vue';
 
 const route = useRoute();
-const store = useStore();
+const projectStore = useProjectStore();
 
 const project = computed(() => {
-    return store.getters.getProjectById(route.params.id);
+    return projectStore.projects.find(p => p.id === route.params.id);
 });
 
 onMounted(() => {

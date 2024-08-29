@@ -16,7 +16,7 @@ const techToolsStore = useTechToolsStore();
       ">
             {{ techToolsStore.toolsHeading }}
         </p>
-        <div class="grid grid-cols-2 sm:grid-cols-4 mt-10 sm:mt-14 gap-2">
+        <div class="grid grid-cols-4 sm:grid-cols-8 mt-10 sm:mt-14 gap-0.5">
             <AboutToolSingle v-for="tool in techToolsStore.tools" :key="tool.id" :tool="tool" />
         </div>
     </div>

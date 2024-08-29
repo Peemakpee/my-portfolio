@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const useTechToolsStore = defineStore('techTools', {
     state: () => ({
-        toolsHeading: 'Technologies and Tools I Have Used',
+        toolsHeading: 'Technologies and tools I have used',
         tools: [
             {
                 id: uuidv4(),
@@ -97,9 +97,9 @@ export const useTechToolsStore = defineStore('techTools', {
             },
             {
                 id: uuidv4(),
-                title: 'AdminLTE',
-                img: '/tech-tools/adminlte.png', // Replace with actual path
-                url: 'https://adminlte.io/',
+                title: 'Bootsrap',
+                img: '/tech-tools/bootstrap.png', // Replace with actual path
+                url: 'https://getbootstrap.com/',
             },
             {
                 id: uuidv4(),
@@ -124,6 +124,30 @@ export const useTechToolsStore = defineStore('techTools', {
                 title: 'Java',
                 img: '/tech-tools/java.png', // Replace with actual path
                 url: 'https://www.oracle.com/java/',
+            },
+            {
+                id: uuidv4(),
+                title: 'Flutter',
+                img: '/tech-tools/flutter.png', // Replace with actual path
+                url: 'https://flutter.dev/',
+            },
+            {
+                id: uuidv4(),
+                title: 'VB.NET',
+                img: '/tech-tools/vbnet.png', // Replace with actual path
+                url: 'https://docs.microsoft.com/en-us/dotnet/visual-basic/',
+            },
+            {
+                id: uuidv4(),
+                title: 'GitHub',
+                img: '/tech-tools/github.png', // Replace with actual path
+                url: 'https://docs.github.com/',
+            },
+            {
+                id: uuidv4(),
+                title: 'Docker',
+                img: '/tech-tools/docker.png', // Replace with actual path
+                url: 'https://docs.docker.com/',
             },
         ],
     }),
