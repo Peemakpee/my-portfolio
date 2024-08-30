@@ -9,7 +9,7 @@ export const useProjectStore = defineStore('projectStore', {
         projectsDescription: 'Description of your projects',
         projects: [
             {
-                id: uuidv4(),
+                id: "f6b966b7-45c2-48c5-ab26-91f99984d50e",
                 title: "Google Health Platform",
                 category: "Web Application",
                 img: "projects/vbnet/med_care3.png",
@@ -62,7 +62,7 @@ export const useProjectStore = defineStore('projectStore', {
                 ],
             },
             {
-                id: uuidv4(),
+                id: "9c2f5137-548d-4023-afe4-0cd09b6d791f",
                 title: "Diwang App",
                 category: "Mobile Application",
                 img: "projects/supabase/btr3.png",
@@ -78,7 +78,12 @@ export const useProjectStore = defineStore('projectStore', {
                     {
                         id: uuidv4(),
                         title: "Phoenix Digital Agency",
-                        img: "projects/laravel/bible-bliss2.png",
+                        img: "/projects/flutter/diwang1.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Uber Project Management UI",
+                        img: "/projects/flutter/diwang2.png",
                     },
                 ],
                 companyInfos: [
