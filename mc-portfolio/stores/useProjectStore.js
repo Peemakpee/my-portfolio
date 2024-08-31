@@ -10,107 +10,120 @@ export const useProjectStore = defineStore('projectStore', {
         projects: [
             {
                 id: "f6b966b7-45c2-48c5-ab26-91f99984d50e",
-                title: "Google Health Platform",
-                category: "Web Application",
+                title: "MedCare",
+                category: "Desktop Application",
                 img: "projects/vbnet/med_care3.png",
-                publishDate: "Nov 04, 2021",
-                tag: "UI / Frontend",
-                clientTitle: "About Client",
-                objectivesTitle: "Objective",
-                objectivesDetails:
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
+                publishDate: "June 5, 2024",
+                tag: "Desktop/VB.NET",
                 techTitle: "Tools & Technologies",
-                detailsTitle: "Challenge",
+                detailsTitle: "About Project",
                 projectImages: [
                     {
                         id: uuidv4(),
-                        title: "Uber Project Management UI",
+                        title: "Desktop Application",
                         img: "/projects/vbnet/med_care1.png",
                     },
                     {
                         id: uuidv4(),
-                        title: "Uber Project Management UI",
+                        title: "Desktop Application",
                         img: "/projects/vbnet/med_care2.png",
                     },
-                ],
-                companyInfos: [
                     {
                         id: uuidv4(),
-                        title: "Name",
-                        details: "Company Ltd",
-                    },
-                    {
-                        id: uuidv4(),
-                        title: "Services",
-                        details: "UI Design & Frontend Development",
+                        title: "Desktop Application",
+                        img: "/projects/vbnet/med_care4.png",
                     },
                 ],
                 technologies: [
-                    "HTML",
-                    "CSS",
-                    "JavaScript",
-                    "Nuxt.js",
-                    "TailwindCSS",
-                    "AdobeXD",
+                    "VB.NET",
+                    "MYSQL",
+                    "Visual Studio",
                 ],
                 projectDetails: [
                     {
                         id: uuidv4(),
                         details:
-                            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+                            "MedCare is a desktop application designed for a medical facility to streamline the storage of patient data and appointments. It implements a stack data structure using the Last-In-First-Out (LIFO) method, ensuring that the latest appointment data is displayed on top of the table view, enabling efficient prioritization.",
                     },
                 ],
             },
             {
                 id: "9c2f5137-548d-4023-afe4-0cd09b6d791f",
-                title: "Diwang App",
-                category: "Mobile Application",
+                title: "BTr Status Tagging System",
+                category: "Web Application",
                 img: "projects/supabase/btr3.png",
-                publishDate: "Nov 04, 2021",
-                tag: "UI / Frontend",
-                clientTitle: "About Client",
-                objectivesTitle: "Objective",
-                objectivesDetails:
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.",
+                publishDate: "April 24, 2021",
+                tag: "Web/VueJS",
                 techTitle: "Tools & Technologies",
-                detailsTitle: "Challenge",
+                detailsTitle: "About Project",
                 projectImages: [
                     {
                         id: uuidv4(),
-                        title: "Phoenix Digital Agency",
-                        img: "/projects/flutter/diwang1.png",
+                        title: "Status Tagging System",
+                        img: "/projects/supabase/btr1.png",
                     },
                     {
                         id: uuidv4(),
-                        title: "Uber Project Management UI",
-                        img: "/projects/flutter/diwang2.png",
-                    },
-                ],
-                companyInfos: [
-                    {
-                        id: uuidv4(),
-                        title: "Name",
-                        details: "Company Ltd",
+                        title: "Status Tagging System",
+                        img: "/projects/supabase/btr2.png",
                     },
                     {
                         id: uuidv4(),
-                        title: "Services",
-                        details: "UI Design & Frontend Development",
+                        title: "Status Tagging System",
+                        img: "/projects/supabase/btr4.png",
                     },
                 ],
                 technologies: [
-                    "HTML",
-                    "CSS",
+                    "VueJS",
+                    "Supabase",
                     "JavaScript",
-                    "Nuxt.js",
+                    "ChartJS",
                     "TailwindCSS",
-                    "AdobeXD",
                 ],
                 projectDetails: [
                     {
                         id: uuidv4(),
                         details:
-                            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?",
+                            "The BTr Status Tagging System is a simple web-based application developed for the Bureau of the Treasury, RXI, as part of my internship. It features basic data visualization using ChartJS and is used to monitor and manage the status of incoming and outgoing documents.",
+                    },
+                ],
+            },
+            {
+                id: "0a3576bb-585c-4506-99d4-afebc6fd88b7",
+                title: "Diwang App",
+                category: "Mobile Application",
+                img: "projects/flutter/diwang1.png",
+                publishDate: "November 23, 2022",
+                tag: "Mobile/Flutter",
+                techTitle: "Tools & Technologies",
+                detailsTitle: "About Project",
+                projectImages: [
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/flutter/diwang2.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/flutter/diwang3.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/flutter/diwang4.png",
+                    },
+                ],
+                technologies: [
+                    "Flutter",
+                    "Firebase",
+                    "Android Studio",
+                ],
+                projectDetails: [
+                    {
+                        id: uuidv4(),
+                        details:
+                            "Diwang, meaning 'Celebration' in Filipino, is a mobile application developed in Flutter to connect event organizers with potential clients. With the surge in events post-pandemic, Diwang aims to simplify the process of finding and booking services like catering, decorations, drinks, and other essential event needs, making it easier for organizers and clients to collaborate.",
                     },
                 ],
             },

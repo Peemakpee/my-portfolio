@@ -35,7 +35,7 @@ const relatedProject = reactive({
       pt-10
       sm:pt-14 sm:mt-20
       border-t-2 border-primary-light
-      dark:border-secondary-dark
+      dark:border-ternary-dark
     ">
         <p class="
         font-general-regular

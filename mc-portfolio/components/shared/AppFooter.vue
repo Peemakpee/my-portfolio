@@ -1,17 +1,15 @@
 <template>
-    <footer class="text-white py-4">
-        <div class="container mx-auto flex flex-col items-center">
-            <div class="
+    <div class="container mx-auto">
+        <div class="
         pt-20
         sm:pt-30
         pb-8
         mt-20
         border-t-2 border-primary-light
-        dark:border-secondary-dark
+        dark:border-ternary-dark
       ">
-
-                <div class="flex flex-col justify-center items-center mb-12 sm:mb-20">
-                    <p class="
+            <div class="flex flex-col justify-center items-center mb-12 sm:mb-20">
+                <p class="
             font-general-semibold
             text-3xl
             sm:text-4xl
@@ -19,14 +17,14 @@
             dark:text-primary-light
             mb-5
           ">
-                        Connect with Me
-                    </p>
+                    Connect with Me
+                </p>
 
 
-                    <!-- Social Icons -->
-                    <ul class="flex gap-4 sm:gap-8 mb-6">
-                        <a v-for="social in socialProfiles" :key="social.id" :href="social.url" target="_blank"
-                            rel="noopener noreferrer" class="
+                <!-- Social Icons -->
+                <ul class="flex gap-4 sm:gap-8 mb-6">
+                    <a v-for="social in socialProfiles" :key="social.id" :href="social.url" target="_blank"
+                        rel="noopener noreferrer" class="
               text-gray-400
               hover:text-secondary-dark
               dark:hover:text-primary-dark
@@ -39,16 +37,16 @@
               p-4
               duration-500
             ">
-                            <i :data-feather="social.icon" class="w-6 sm:w-8 h-6 sm:h-8"></i>
-                        </a>
-                    </ul>
-                </div>
-
-                <!-- Copyright -->
-                <FooterCopyright />
+                        <i :data-feather="social.icon" class="w-6 sm:w-8 h-6 sm:h-8"></i>
+                    </a>
+                </ul>
             </div>
+
+            <!-- Copyright -->
+            <FooterCopyright />
         </div>
-    </footer>
+    </div>
+
 </template>
 
 <script setup>
