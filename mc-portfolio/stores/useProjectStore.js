@@ -127,6 +127,45 @@ export const useProjectStore = defineStore('projectStore', {
                     },
                 ],
             },
+            {
+                id: "0a3576bb-585c-4506-99d4-afebc6fd88b7",
+                title: "Bible Bliss",
+                category: "Web Application",
+                img: "projects/laravel/bible-bliss1.png",
+                publishDate: "October 5, 2023",
+                tag: "Web/Laravel",
+                techTitle: "Tools & Technologies",
+                detailsTitle: "About Project",
+                projectImages: [
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/flutter/bible-bliss1.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/flutter/bible-bliss2.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/flutter/bible-bliss1.png",
+                    },
+                ],
+                technologies: [
+                    "Flutter",
+                    "Firebase",
+                    "Android Studio",
+                ],
+                projectDetails: [
+                    {
+                        id: uuidv4(),
+                        details:
+                            "Diwang, meaning 'Celebration' in Filipino, is a mobile application developed in Flutter to connect event organizers with potential clients. With the surge in events post-pandemic, Diwang aims to simplify the process of finding and booking services like catering, decorations, drinks, and other essential event needs, making it easier for organizers and clients to collaborate.",
+                    },
+                ],
+            },
         ],
     }),
 
