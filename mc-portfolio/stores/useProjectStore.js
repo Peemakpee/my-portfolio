@@ -13,7 +13,7 @@ export const useProjectStore = defineStore('projectStore', {
                 title: "BTr Status Tagging System",
                 category: "Web Application",
                 img: "projects/supabase/btr3.png",
-                publishDate: "April 24, 2021",
+                publishDate: "May 29, 2024",
                 tag: "Web/VueJS",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
@@ -54,7 +54,7 @@ export const useProjectStore = defineStore('projectStore', {
                 title: "MedCare",
                 category: "Desktop Application",
                 img: "projects/vbnet/med_care3.png",
-                publishDate: "June 5, 2024",
+                publishDate: "May 5, 2024",
                 tag: "Desktop/VB.NET",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
@@ -132,7 +132,7 @@ export const useProjectStore = defineStore('projectStore', {
                 title: "Bible Bliss",
                 category: "Web Application",
                 img: "projects/laravel/bible-bliss1.png",
-                publishDate: "October 5, 2023",
+                publishDate: "May 23, 2022",
                 tag: "Web/Laravel",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
@@ -155,7 +155,6 @@ export const useProjectStore = defineStore('projectStore', {
                 ],
                 technologies: [
                     "Laravel",
-                    "CSS",
                     "Rapid API",
                 ],
                 projectDetails: [
@@ -167,11 +166,11 @@ export const useProjectStore = defineStore('projectStore', {
                 ],
             },
             {
-                id: uuidv4(),
+                id: "2485dd99-262c-4c09-b383-4349aba317a2",
                 title: "SkyNet",
                 category: "Desktop Application",
                 img: "projects/vbnet/skynet1.png",
-                publishDate: "October 5, 2023",
+                publishDate: "February 10, 2023",
                 tag: "Desktop/VB.NET",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
@@ -202,6 +201,49 @@ export const useProjectStore = defineStore('projectStore', {
                         id: uuidv4(),
                         details:
                             "SkyNet is a desktop application developed in VB.NET designed to assist freelancers and remote workers in finding and managing co-working spaces. Born out of the increased demand for flexible work environments during the pandemic, this simple application enables users to clock in and out, and calculates daily, weekly, and monthly payments based on their usage.",
+                    },
+                ],
+            },
+            {
+                id: "bbb04e57-6165-46eb-96c9-2d6ae4336ae6",
+                title: "CCEtracker",
+                category: "Web Application",
+                img: "projects/vuejs/cce1.png",
+                publishDate: "October 27, 2023",
+                tag: "Web/Laravel",
+                techTitle: "Tools & Technologies",
+                detailsTitle: "About Project",
+                projectImages: [
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/vuejs/cce2.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/vuejs/cce3.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/vuejs/cce4.png",
+                    },
+                ],
+                technologies: [
+                    "VueJS",
+                    "MYSQL",
+                    "Laravel",
+                    "AdminLTE",
+                    "Firebase",
+                    "ChartJS",
+                    "TailwindCSS"
+                ],
+                projectDetails: [
+                    {
+                        id: uuidv4(),
+                        details:
+                            "CCEtracker is a web-based document management system developed as a capstone project and a requirement for completing my degree. Designed for the Office of the Dean in the College of Computing Education, it enhances data visualization and streamlines document handling. The system allows users to track and manage deliverables efficiently, while administrators can set deadlines, approve documents, and manage templates. Developed using the Agile methodology, CCEtracker addresses challenges in manual tracking, significantly improving academic document management.",
                     },
                 ],
             },
