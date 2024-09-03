@@ -201,7 +201,7 @@ export const useProjectStore = defineStore('projectStore', {
                     {
                         id: uuidv4(),
                         details:
-                            "Bible Bliss is a Laravel-powered web application that serves as a Bible content tool with dynamic content delivery, focusing on retrieving and displaying Bible verses from an external API based on user searches and daily verse updates.",
+                            "SkyNet is a desktop application developed in VB.NET designed to assist freelancers and remote workers in finding and managing co-working spaces. Born out of the increased demand for flexible work environments during the pandemic, this simple application enables users to clock in and out, and calculates daily, weekly, and monthly payments based on their usage.",
                     },
                 ],
             },
