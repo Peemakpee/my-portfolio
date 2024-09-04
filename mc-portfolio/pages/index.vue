@@ -14,8 +14,10 @@
       rounded-lg
       shadow-lg
       hover:shadow-xl
-      bg-indigo-500
-      hover:bg-indigo-600
+      bg-secondary-dark
+      dark:bg-ternary-dark
+  hover:bg-[#1a3e70] 
+  dark:hover:bg-blue-950
       focus:ring-1 focus:ring-indigo-900
       text-white text-lg
       sm:text-xl

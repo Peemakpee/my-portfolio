@@ -2,6 +2,7 @@
 import { ref, computed, onMounted } from 'vue';
 import { useProjectStore } from '@/stores/useProjectStore';
 import ProjectsFilter from '../components/projects/ProjectsFilter.vue';
+import feather from "feather-icons";
 
 const store = useProjectStore();
 const selectedProject = ref('');
@@ -25,40 +26,40 @@ const projects = computed(() => {
 });
 
 const filteredProjects = computed(() => {
-    if (selectedProject.value) {
-        return filterProjectsByCategory();
-    } else if (searchProject.value) {
-        return filterProjectsBySearch();
-    }
-    return projects.value;
+  if (selectedProject.value) {
+    return filterProjectsByCategory();
+  } else if (searchProject.value) {
+    return filterProjectsBySearch();
+  }
+  return projects.value;
 });
 
 
 
 // Methods
 function filterProjectsByCategory() {
-    return projects.value.filter(item => {
-        let category = item.category.charAt(0).toUpperCase() + item.category.slice(1);
-        return category.includes(selectedProject.value);
-    });
+  return projects.value.filter(item => {
+    let category = item.category.charAt(0).toUpperCase() + item.category.slice(1);
+    return category.includes(selectedProject.value);
+  });
 }
 
 function filterProjectsBySearch() {
-    const project = new RegExp(searchProject.value, 'i');
-    return projects.value.filter(el => el.title.match(project));
+  const project = new RegExp(searchProject.value, 'i');
+  return projects.value.filter(el => el.title.match(project));
 }
 
 // Lifecycle hook
 onMounted(() => {
-    // Any setup needed
+  feather.replace();
 });
 </script>
 
 <template>
-    <div class="pt-10 sm:pt-20 md:pt-24">
-        <!-- Projects grid header -->
-        <div class="text-center">
-            <p class="
+  <div class="pt-10 sm:pt-20 md:pt-24">
+    <!-- Projects grid header -->
+    <div class="text-center">
+      <p class="
           font-general-semibold
           text-2xl
           sm:text-5xl
@@ -67,17 +68,17 @@ onMounted(() => {
           text-ternary-dark
           dark:text-ternary-light
         ">
-                {{ projectsHeading }}
-            </p>
-            <!-- Uncomment this if you want to include the description -->
-            <!-- <p class="text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
+        {{ projectsHeading }}
+      </p>
+      <!-- Uncomment this if you want to include the description -->
+      <!-- <p class="text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
         {{ projectsDescription }}
       </p> -->
-        </div>
+    </div>
 
-        <!-- Filter and search projects -->
-        <div class="mt-8 sm:mt-10">
-            <h3 class="
+    <!-- Filter and search projects -->
+    <div class="mt-8 sm:mt-10">
+      <h3 class="
           font-general-regular
           text-center text-secondary-dark
           dark:text-ternary-light
@@ -86,9 +87,9 @@ onMounted(() => {
           font-normal
           mb-4
         ">
-                Search projects by title or filter by category
-            </h3>
-            <div class="
+        Search projects by title or filter by category
+      </h3>
+      <div class="
           flex
           justify-between
           border-b border-primary-light
@@ -96,8 +97,8 @@ onMounted(() => {
           pb-3
           gap-2
         ">
-                <div class="flex justify-between gap-2">
-                    <span class="
+        <div class="flex justify-between gap-2">
+          <span class="
               hidden
               sm:block
               bg-primary-light
@@ -107,9 +108,9 @@ onMounted(() => {
               rounded-xl
               cursor-pointer
             ">
-                        <i data-feather="search" class="text-ternary-dark dark:text-ternary-light"></i>
-                    </span>
-                    <input v-model="searchProject" class="
+            <i data-feather="search" class="text-ternary-dark dark:text-ternary-light"></i>
+          </span>
+          <input v-model="searchProject" class="
               font-general-medium
               pl-3
               pr-1
@@ -125,14 +126,14 @@ onMounted(() => {
               text-primary-dark
               dark:text-ternary-light
             " id="name" name="name" type="search" placeholder="Search Projects" aria-label="Name" />
-                </div>
-                <ProjectsFilter @change="selectedProject = $event" />
-            </div>
         </div>
+        <ProjectsFilter @change="selectedProject = $event" />
+      </div>
+    </div>
 
-        <!-- Projects grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
-            <div v-for="project in filteredProjects" :key="project.id" class="
+    <!-- Projects grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
+      <div v-for="project in filteredProjects" :key="project.id" class="
       rounded-xl
       shadow-lg
       hover:shadow-xl
@@ -142,30 +143,30 @@ onMounted(() => {
       bg-secondary-light
       dark:bg-ternary-dark
     " aria-label="Single Project">
-                <NuxtLink :to="`/projects/${project.id}`">
-                    <div class="flex justify-center">
-                        <img :src="project.img" :alt="project.title" class="rounded-t-xl border-none" />
-                    </div>
-                    <div class="text-center px-4 py-6">
-                        <p class="
+        <NuxtLink :to="`/projects/${project.id}`">
+          <div class="flex justify-center">
+            <img :src="project.img" :alt="project.title" class="rounded-t-xl border-none" />
+          </div>
+          <div class="text-center px-4 py-6">
+            <p class="
             font-general-semibold
             text-xl text-ternary-dark
             dark:text-ternary-light
             font-semibold
             mb-2
           ">
-                            {{ project.title }}
-                        </p>
-                        <span class="
+              {{ project.title }}
+            </p>
+            <span class="
             font-general-medium
             text-lg text-ternary-dark
             dark:text-ternary-light
           ">{{ project.category }}</span>
-                    </div>
-                </NuxtLink>
-            </div>
-        </div>
+          </div>
+        </NuxtLink>
+      </div>
     </div>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
