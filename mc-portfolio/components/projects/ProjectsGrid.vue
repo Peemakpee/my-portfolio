@@ -7,10 +7,22 @@ const store = useProjectStore();
 const selectedProject = ref('');
 const searchProject = ref('');
 
+const props = defineProps({
+  limit: {
+    type: Number,
+    default: null
+  }
+});
+
 // Computed properties
 const projectsHeading = computed(() => store.projectsHeading);
 const projectsDescription = computed(() => store.projectsDescription);
-const projects = computed(() => store.projects);
+const projects = computed(() => {
+  if (props.limit) {
+    return store.projects.slice(0, props.limit);
+  }
+  return store.projects;
+});
 
 const filteredProjects = computed(() => {
     if (selectedProject.value) {
@@ -20,6 +32,8 @@ const filteredProjects = computed(() => {
     }
     return projects.value;
 });
+
+
 
 // Methods
 function filterProjectsByCategory() {

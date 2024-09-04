@@ -3,7 +3,6 @@ import { computed, onMounted, onUpdated } from 'vue';
 import { useRoute } from '#app';
 import { useProjectStore } from '@/stores/useProjectStore';
 import feather from 'feather-icons';
-import ProjectRelatedProjects from '../../components/projects/ProjectRelatedProjects.vue';
 
 const route = useRoute();
 const projectStore = useProjectStore();
@@ -145,8 +144,6 @@ onUpdated(() => {
                 </div>
             </div>
 
-            <!-- Project related projects -->
-            <ProjectRelatedProjects />
         </div>
 
         <!-- Load not found components if no project found -->
