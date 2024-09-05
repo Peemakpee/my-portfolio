@@ -17,7 +17,7 @@
       bg-secondary-dark
       dark:bg-ternary-dark
   hover:bg-[#1a3e70] 
-  dark:hover:bg-blue-950
+  dark:hover:bg-secondary-dark
       focus:ring-1 focus:ring-indigo-900
       text-white text-lg
       sm:text-xl

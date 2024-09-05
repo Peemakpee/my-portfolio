@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from 'uuid';
 export const useProjectStore = defineStore('projectStore', {
     state: () => ({
         projectsHeading: 'Projects Portfolio',
-        projectsDescription: 'Description of your projects',
         projects: [
             {
                 id: "9c2f5137-548d-4023-afe4-0cd09b6d791f",
@@ -286,39 +285,40 @@ export const useProjectStore = defineStore('projectStore', {
             },
             {
                 id: "a503f92e-b35a-4903-8a41-765c7f69c918",
-                title: "Real-Time Chat Application",
+                title: "Hip-Hop Pulse",
                 category: "Web Application",
-                img: "projects/socketio/chatme1.png",
-                publishDate: "September 5, 2023",
-                tag: "Web/SocketIO",
+                img: "projects/nuxtjs/pulse1.png",
+                publishDate: "April 5, 2024",
+                tag: "Web/NuxtJS",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
                 projectImages: [
                     {
                         id: uuidv4(),
                         title: "Web Application",
-                        img: "/projects/socketio/chatme2.png",
+                        img: "/projects/nuxtjs/pulse1.png",
                     },
                     {
                         id: uuidv4(),
                         title: "Desktop Application",
-                        img: "/projects/socketio/chatme1.png",
+                        img: "/projects/nuxtjs/pulse2.png",
                     },
                     {
                         id: uuidv4(),
                         title: "Desktop Application",
-                        img: "/projects/socketio/chatme3.png",
+                        img: "/projects/nuxtjs/pulse3.png",
                     },
                 ],
                 technologies: [
-                    "NodeJS",
-                    "SocketIO",
+                    "NuxtJS",
+                    "VueJS",
+                    "Supabase",
                 ],
                 projectDetails: [
                     {
                         id: uuidv4(),
                         details:
-                            "Built a real-time chat application using Socket.IO and Node.js. The app enables instant messaging between customers and suppliers.",
+                            "Hip-Hop Pulse is a passion project designed as a simple blog to celebrate and explore the world of hip-hop. Covering its rich history, the trailblazers who shaped the genre, legendary figures, and the evolution of hip-hop today, this blog aims to highlight hip-hop as more than just music—it's a cultural phenomenon. As a hip-hop fan, this project serves as a space to spread awareness and appreciation for the art form and its influence.",
                     },
                 ],
             },

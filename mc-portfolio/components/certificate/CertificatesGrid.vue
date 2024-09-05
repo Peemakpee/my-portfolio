@@ -49,71 +49,12 @@ onMounted(() => {
           text-2xl
           sm:text-5xl
           font-semibold
-          mb-2
+          mb-10
           text-ternary-dark
           dark:text-ternary-light
         ">
                 {{ certificatesHeading }}
             </p>
-            <!-- Uncomment this if you want to include the description -->
-            <!-- <p class="text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
-        {{ certificatesDescription }}
-      </p> -->
-        </div>
-
-        <!-- Filter and search certificates -->
-        <div class="mt-8 sm:mt-10">
-            <h3 class="
-          font-general-regular
-          text-center text-secondary-dark
-          dark:text-ternary-light
-          text-md
-          sm:text-xl
-          font-normal
-          mb-4
-        ">
-                Search certificates by title or filter by category
-            </h3>
-            <div class="
-          flex
-          justify-between
-          border-b border-primary-light
-          dark:border-secondary-dark
-          pb-3
-          gap-2
-        ">
-                <div class="flex justify-between gap-2">
-                    <span class="
-              hidden
-              sm:block
-              bg-primary-light
-              dark:bg-ternary-dark
-              p-2.5
-              shadow-sm
-              rounded-xl
-              cursor-pointer
-            ">
-                        <i data-feather="search" class="text-ternary-dark dark:text-ternary-light"></i>
-                    </span>
-                    <input v-model="searchCertificate" class="
-              font-general-medium
-              pl-3
-              pr-1
-              sm:px-4
-              py-2
-              border-1 border-gray-200
-              dark:border-secondary-dark
-              rounded-lg
-              text-sm
-              sm:text-md
-              bg-secondary-light
-              dark:bg-ternary-dark
-              text-primary-dark
-              dark:text-ternary-light
-            " id="name" name="name" type="search" placeholder="Search Certificates" aria-label="Name" />
-                </div>
-                <CertificatesFilter @change="selectedCertificate = $event" />
-            </div>
         </div>
 
         <!-- Certificates grid -->
@@ -123,12 +64,13 @@ onMounted(() => {
           shadow-lg
           hover:shadow-xl
           cursor-pointer
+          dark:hover:shadow-secondary-dark
           mb-10
           sm:mb-0
           bg-secondary-light
           dark:bg-ternary-dark
         " aria-label="Single Certificate">
-                <NuxtLink :to="`/certificates/${certificate.id}`">
+                <NuxtLink :to="`/certificate/${certificate.id}`">
                     <div>
                         <img :src="certificate.img" :alt="certificate.title" class="rounded-t-xl border-none" />
                     </div>

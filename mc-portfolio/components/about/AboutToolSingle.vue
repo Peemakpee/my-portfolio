@@ -16,6 +16,8 @@ defineProps({
                     dark:border-ternary-dark
                     shadow-sm
                     rounded-lg
+      hover:shadow-lg
+      dark:hover:shadow-secondary-dark
                     mb-2
                     cursor-pointer
                     dark:bg-secondary-light

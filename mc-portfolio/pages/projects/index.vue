@@ -1,22 +1,18 @@
 <script setup>
-// You can define any reactive data or computed properties here when needed
-// For now, placeholders can be set up if needed in the future
+import { onMounted, onUpdated } from 'vue';
+import feather from 'feather-icons';
 
-// Example of a reactive property (currently unused)
-// import { ref } from 'vue';
-// const myData = ref([]);
+onMounted(() => {
+    feather.replace();
+});
 
-// Example of a computed property (currently unused)
-import { computed } from 'vue';
-const myComputed = computed(() => {
-    // @todo: logic here
+onUpdated(() => {
+    feather.replace();
 });
 </script>
 
 <template>
-    <div class="container mx-auto">
-        <ProjectsGrid />
-    </div>
+    <ProjectsGrid class="container mx-auto" />
 </template>
 
 <style lang="scss" scoped></style>

@@ -70,10 +70,6 @@ onMounted(() => {
         ">
         {{ projectsHeading }}
       </p>
-      <!-- Uncomment this if you want to include the description -->
-      <!-- <p class="text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
-        {{ projectsDescription }}
-      </p> -->
     </div>
 
     <!-- Filter and search projects -->
@@ -137,6 +133,7 @@ onMounted(() => {
       rounded-xl
       shadow-lg
       hover:shadow-xl
+      dark:hover:shadow-secondary-dark
       cursor-pointer
       mb-10
       sm:mb-0
