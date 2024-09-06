@@ -9,26 +9,28 @@ export const useProjectStore = defineStore('projectStore', {
                 id: "9c2f5137-548d-4023-afe4-0cd09b6d791f",
                 title: "BTr Status Tagging System",
                 category: "Web Application",
-                img: "projects/supabase/btr3.png",
+                img: "projects/supabase/btr5.png",
                 publishDate: "May 29, 2024",
                 tag: "Web/VueJS",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
+                github: "https://github.com/Peemakpee/btr-tagging-system",
+                liveSite: "https://btr-tagging-system.vercel.app/",
                 projectImages: [
                     {
                         id: uuidv4(),
                         title: "Status Tagging System",
-                        img: "/projects/supabase/btr1.png",
+                        img: "/projects/supabase/btr6.png",
                     },
                     {
                         id: uuidv4(),
                         title: "Status Tagging System",
-                        img: "/projects/supabase/btr2.png",
+                        img: "/projects/supabase/btr7.png",
                     },
                     {
                         id: uuidv4(),
                         title: "Status Tagging System",
-                        img: "/projects/supabase/btr4.png",
+                        img: "/projects/supabase/btr8.png",
                     },
                 ],
                 technologies: [
@@ -47,84 +49,6 @@ export const useProjectStore = defineStore('projectStore', {
                 ],
             },
             {
-                id: "f6b966b7-45c2-48c5-ab26-91f99984d50e",
-                title: "MedCare",
-                category: "Desktop Application",
-                img: "projects/vbnet/med_care3.png",
-                publishDate: "May 5, 2024",
-                tag: "Desktop/VB.NET",
-                techTitle: "Tools & Technologies",
-                detailsTitle: "About Project",
-                projectImages: [
-                    {
-                        id: uuidv4(),
-                        title: "Desktop Application",
-                        img: "/projects/vbnet/med_care1.png",
-                    },
-                    {
-                        id: uuidv4(),
-                        title: "Desktop Application",
-                        img: "/projects/vbnet/med_care2.png",
-                    },
-                    {
-                        id: uuidv4(),
-                        title: "Desktop Application",
-                        img: "/projects/vbnet/med_care4.png",
-                    },
-                ],
-                technologies: [
-                    "VB.NET",
-                    "MYSQL",
-                    "Visual Studio",
-                ],
-                projectDetails: [
-                    {
-                        id: uuidv4(),
-                        details:
-                            "MedCare is a desktop application designed for a medical facility to streamline the storage of patient data and appointments. It implements a stack data structure using the Last-In-First-Out (LIFO) method, ensuring that the latest appointment data is displayed on top of the table view, enabling efficient prioritization.",
-                    },
-                ],
-            },
-            {
-                id: "0a3576bb-585c-4506-99d4-afebc6fd88b7",
-                title: "Diwang App",
-                category: "Mobile Application",
-                img: "projects/flutter/diwang1.png",
-                publishDate: "November 23, 2022",
-                tag: "Mobile/Flutter",
-                techTitle: "Tools & Technologies",
-                detailsTitle: "About Project",
-                projectImages: [
-                    {
-                        id: uuidv4(),
-                        title: "Desktop Application",
-                        img: "/projects/flutter/diwang2.png",
-                    },
-                    {
-                        id: uuidv4(),
-                        title: "Desktop Application",
-                        img: "/projects/flutter/diwang3.png",
-                    },
-                    {
-                        id: uuidv4(),
-                        title: "Desktop Application",
-                        img: "/projects/flutter/diwang4.png",
-                    },
-                ],
-                technologies: [
-                    "Flutter",
-                    "Firebase",
-                    "Android Studio",
-                ],
-                projectDetails: [
-                    {
-                        id: uuidv4(),
-                        details:
-                            "Diwang, meaning 'Celebration' in Filipino, is a mobile application developed in Flutter to connect event organizers with potential clients. With the surge in events post-pandemic, Diwang aims to simplify the process of finding and booking services like catering, decorations, drinks, and other essential event needs, making it easier for organizers and clients to collaborate.",
-                    },
-                ],
-            },
-            {
                 id: "b9269f51-eb23-4e66-8b9b-c8ed760e1562",
                 title: "Bible Bliss",
                 category: "Web Application",
@@ -133,6 +57,8 @@ export const useProjectStore = defineStore('projectStore', {
                 tag: "Web/Laravel",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
+                github: "https://github.com/Peemakpee/bible-bliss",
+                liveSite: "Not Deployed",
                 projectImages: [
                     {
                         id: uuidv4(),
@@ -163,6 +89,47 @@ export const useProjectStore = defineStore('projectStore', {
                 ],
             },
             {
+                id: "f6b966b7-45c2-48c5-ab26-91f99984d50e",
+                title: "MedCare",
+                category: "Desktop Application",
+                img: "projects/vbnet/med_care3.png",
+                publishDate: "May 5, 2024",
+                tag: "Desktop/VB.NET",
+                techTitle: "Tools & Technologies",
+                detailsTitle: "About Project",
+                github: "https://github.com/Peemakpee/medcare",
+                liveSite: "Not Deployed",
+                projectImages: [
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/vbnet/med_care3.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/vbnet/med_care1.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/vbnet/med_care2.png",
+                    },
+                ],
+                technologies: [
+                    "VB.NET",
+                    "MYSQL",
+                    "Visual Studio",
+                ],
+                projectDetails: [
+                    {
+                        id: uuidv4(),
+                        details:
+                            "MedCare is a desktop application designed for a medical facility to streamline the storage of patient data and appointments. It implements a stack data structure using the Last-In-First-Out (LIFO) method, ensuring that the latest appointment data is displayed on top of the table view, enabling efficient prioritization.",
+                    },
+                ],
+            },
+            {
                 id: "2485dd99-262c-4c09-b383-4349aba317a2",
                 title: "SkyNet",
                 category: "Desktop Application",
@@ -171,6 +138,8 @@ export const useProjectStore = defineStore('projectStore', {
                 tag: "Desktop/VB.NET",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
+                github: "https://github.com/Peemakpee/Co-Working-Space-Attendance-System",
+                liveSite: "Not Deployed",
                 projectImages: [
                     {
                         id: uuidv4(),
@@ -180,12 +149,12 @@ export const useProjectStore = defineStore('projectStore', {
                     {
                         id: uuidv4(),
                         title: "Desktop Application",
-                        img: "/projects/vbnet/skynet3.png",
+                        img: "/projects/vbnet/skynet1.png",
                     },
                     {
                         id: uuidv4(),
                         title: "Desktop Application",
-                        img: "/projects/vbnet/skynet4.png",
+                        img: "/projects/vbnet/skynet3.png",
                     },
                 ],
                 technologies: [
@@ -202,6 +171,47 @@ export const useProjectStore = defineStore('projectStore', {
                 ],
             },
             {
+                id: "a503f92e-b35a-4903-8a41-765c7f69c918",
+                title: "Hip-Hop Pulse",
+                category: "Web Application",
+                img: "projects/nuxtjs/pulse1.png",
+                publishDate: "April 5, 2024",
+                tag: "Web/NuxtJS",
+                techTitle: "Tools & Technologies",
+                detailsTitle: "About Project",
+                github: "https://github.com/Peemakpee/hiphop-pulse",
+                liveSite: "Not Deployed",
+                projectImages: [
+                    {
+                        id: uuidv4(),
+                        title: "Web Application",
+                        img: "/projects/nuxtjs/pulse1.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/nuxtjs/pulse2.png",
+                    },
+                    {
+                        id: uuidv4(),
+                        title: "Desktop Application",
+                        img: "/projects/nuxtjs/pulse3.png",
+                    },
+                ],
+                technologies: [
+                    "NuxtJS",
+                    "VueJS",
+                    "Supabase",
+                ],
+                projectDetails: [
+                    {
+                        id: uuidv4(),
+                        details:
+                            "Hip-Hop Pulse is a passion project designed as a simple blog to celebrate and explore the world of hip-hop. Covering its rich history, the trailblazers who shaped the genre, legendary figures, and the evolution of hip-hop today, this blog aims to highlight hip-hop as more than just music—it's a cultural phenomenon. As a hip-hop fan, this project serves as a space to spread awareness and appreciation for the art form and its influence.",
+                    },
+                ],
+            },
+            {
                 id: "bbb04e57-6165-46eb-96c9-2d6ae4336ae6",
                 title: "CCEtracker",
                 category: "Web Application",
@@ -210,6 +220,8 @@ export const useProjectStore = defineStore('projectStore', {
                 tag: "Web/Laravel",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
+                github: "https://github.com/Peemakpee/ccetracker-system",
+                liveSite: "Not Deployed",
                 projectImages: [
                     {
                         id: uuidv4(),
@@ -253,6 +265,8 @@ export const useProjectStore = defineStore('projectStore', {
                 tag: "Web/Laravel",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
+                github: "https://github.com/Peemakpee/POS_and_Inventory_System",
+                liveSite: "Not Deployed",
                 projectImages: [
                     {
                         id: uuidv4(),
@@ -284,41 +298,43 @@ export const useProjectStore = defineStore('projectStore', {
                 ],
             },
             {
-                id: "a503f92e-b35a-4903-8a41-765c7f69c918",
-                title: "Hip-Hop Pulse",
-                category: "Web Application",
-                img: "projects/nuxtjs/pulse1.png",
-                publishDate: "April 5, 2024",
-                tag: "Web/NuxtJS",
+                id: "0a3576bb-585c-4506-99d4-afebc6fd88b7",
+                title: "Diwang App",
+                category: "Mobile Application",
+                img: "projects/flutter/diwang1.png",
+                publishDate: "November 23, 2022",
+                tag: "Mobile/Flutter",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
+                github: "https://github.com/Peemakpee/event_planner",
+                liveSite: "Not Deployed",
                 projectImages: [
                     {
                         id: uuidv4(),
-                        title: "Web Application",
-                        img: "/projects/nuxtjs/pulse1.png",
+                        title: "Desktop Application",
+                        img: "/projects/flutter/diwang2.png",
                     },
                     {
                         id: uuidv4(),
                         title: "Desktop Application",
-                        img: "/projects/nuxtjs/pulse2.png",
+                        img: "/projects/flutter/diwang3.png",
                     },
                     {
                         id: uuidv4(),
                         title: "Desktop Application",
-                        img: "/projects/nuxtjs/pulse3.png",
+                        img: "/projects/flutter/diwang4.png",
                     },
                 ],
                 technologies: [
-                    "NuxtJS",
-                    "VueJS",
-                    "Supabase",
+                    "Flutter",
+                    "Firebase",
+                    "Android Studio",
                 ],
                 projectDetails: [
                     {
                         id: uuidv4(),
                         details:
-                            "Hip-Hop Pulse is a passion project designed as a simple blog to celebrate and explore the world of hip-hop. Covering its rich history, the trailblazers who shaped the genre, legendary figures, and the evolution of hip-hop today, this blog aims to highlight hip-hop as more than just music—it's a cultural phenomenon. As a hip-hop fan, this project serves as a space to spread awareness and appreciation for the art form and its influence.",
+                            "Diwang, meaning 'Celebration' in Filipino, is a mobile application developed in Flutter to connect event organizers with potential clients. With the surge in events post-pandemic, Diwang aims to simplify the process of finding and booking services like catering, decorations, drinks, and other essential event needs, making it easier for organizers and clients to collaborate.",
                     },
                 ],
             },
@@ -331,6 +347,8 @@ export const useProjectStore = defineStore('projectStore', {
                 tag: "Web/Django",
                 techTitle: "Tools & Technologies",
                 detailsTitle: "About Project",
+                github: "https://github.com/Peemakpee/gptclone",
+                liveSite: "Not Deployed",
                 projectImages: [
                     {
                         id: uuidv4(),

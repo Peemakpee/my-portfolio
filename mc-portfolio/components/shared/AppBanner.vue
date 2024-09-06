@@ -1,13 +1,11 @@
 <template>
     <section class="flex flex-col sm:justify-between items-center sm:flex-row mt-8 sm:mt-2">
         <!-- Banner left contents -->
-        <div class="w-full md:w-1/3 text-left">
-            <h1
-                class="font-general-semibold text-3xl md:text-3xl xl:text-4xl text-center sm:text-left text-secondary-dark dark:text-primary-light uppercase">
+        <div class="w-full md:w-1/3 text-left lg:ml-36 md:mr-8">
+            <h1 class="font-general-semibold text-3xl md:text-3xl xl:text-4xl text-center sm:text-left text-secondary-dark dark:text-primary-light uppercase">
                 Hi, I am Mc Phy
             </h1>
-            <p
-                class="font-general-medium mt-2 text-lg sm:text-xl xl:text-2xl text-center sm:text-left leading-none text-gray-400 dark:text-gray-400">
+            <p class="font-general-medium mt-2 text-lg sm:text-xl xl:text-2xl text-center sm:text-left leading-none text-gray-400 dark:text-gray-400">
                 A Web Developer
             </p>
             <div class="flex justify-center sm:block">
@@ -21,9 +19,12 @@
         </div>
 
         <!-- Banner right illustration -->
-        <div class="w-full md:w-2/3 text-right float-right">
-            <img v-if="$colorMode.value === 'dark'" src="../../static/developer-dark.png" alt="Developer Dark" />
-            <img v-else src="../../static/developer.png" alt="Developer Light" />
+        <div class="w-full md:w-2/3 text-right md:mr-14">
+            <Vue3Lottie 
+                animation-link="https://assets2.lottiefiles.com/packages/lf20_GbabwrUY2k.json"
+                :height="responsiveHeight"
+                :width="responsiveWidth"
+            />
         </div>
     </section>
 </template>
@@ -31,13 +32,29 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import feather from 'feather-icons';
-
+import { Vue3Lottie } from 'vue3-lottie'
 
 onMounted(() => {
-    feather.replace(); // Replaces the placeholders with icons
+    feather.replace(); 
 });
+const responsiveHeight = "h-48 md:h-96";
+const responsiveWidth = "w-48 md:w-96";
 </script>
 
 <style scoped>
-/* Add any specific styles here */
+.h-48 {
+    height: 200px;
+}
+
+.md:h-96 {
+    height: 500px;
+}
+
+.w-48 {
+    width: 200px;
+}
+
+.md:w-96 {
+    width: 500px;
+}
 </style>

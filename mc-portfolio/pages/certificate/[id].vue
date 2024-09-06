@@ -11,6 +11,10 @@ const certificate = computed(() => {
     return certificateStore.certificates.find(c => c.id === route.params.id);
 });
 
+const isOnlineCertification = computed(() => {
+    return certificate.value?.category === 'Online Certification';
+});
+
 onMounted(() => {
     feather.replace();
 });
@@ -63,10 +67,18 @@ onUpdated(() => {
                 </div>
             </div>
 
-            <!-- Certificate gallery -->
+            <!-- Conditional gallery layout -->
             <div class="flex justify-center mt-12">
                 <div class="w-full max-w-4xl">
-                    <div class="flex flex-wrap justify-center gap-10">
+                    <!-- Check if the category is "Online Certification" -->
+                    <div v-if="isOnlineCertification" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                        <div v-for="certificateImage in certificate.certificateImages" :key="certificateImage.id">
+                            <img :src="certificateImage.img" class="w-full h-auto rounded-xl shadow-lg" />
+                        </div>
+                    </div>
+
+                    <!-- Default flex layout for other categories -->
+                    <div v-else class="flex flex-wrap justify-center gap-10">
                         <div v-for="certificateImage in certificate.certificateImages" :key="certificateImage.id">
                             <img :src="certificateImage.img" class="max-w-full h-auto rounded-xl shadow-lg" />
                         </div>

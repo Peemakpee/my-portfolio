@@ -50,7 +50,7 @@ onMounted(() => {
           sm:text-5xl
           font-semibold
           mb-10
-          text-ternary-dark
+          text-primary-dark
           dark:text-ternary-light
         ">
                 {{ certificatesHeading }}
@@ -71,7 +71,7 @@ onMounted(() => {
           dark:bg-ternary-dark
         " aria-label="Single Certificate">
                 <NuxtLink :to="`/certificate/${certificate.id}`">
-                    <div>
+                    <div class="flex justify-center">
                         <img :src="certificate.img" :alt="certificate.title" class="rounded-t-xl border-none" />
                     </div>
                     <div class="text-center px-4 py-6">
