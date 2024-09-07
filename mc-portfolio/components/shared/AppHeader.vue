@@ -39,9 +39,9 @@ function showModal() {
                 <!-- Header logos -->
                 <div>
                     <NuxtLink to="/">
-                        <img v-if="$colorMode.value === 'dark'" src="/logo-dark.png" class="w-36" alt="Light Logo" />
+                        <img v-if="$colorMode.value === 'light'" src="/logo-light.png" class="w-36" alt="Light Logo" />
 
-                        <img v-else src="/logo-light.png" alt="Color Logo" class="w-36" />
+                        <img v-else src="/logo-dark.png" alt="Color Logo" class="w-36" />
                     </NuxtLink>
                 </div>
 
