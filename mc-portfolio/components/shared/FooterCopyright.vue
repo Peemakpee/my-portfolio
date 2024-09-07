@@ -12,15 +12,6 @@
             dark:hover:text-ternary-dark
             duration-500
           ">{{ projectName }}</a>
-            . Developed by
-            <a href="https://dev.to/peemakpee" target="_blank" class="
-            font-semibold
-            dark:text-secondary-light
-            uppercase
-            hover:underline hover:text-secondary-dark
-            dark:hover:text-ternary-dark
-            duration-500
-          ">{{ author }}</a>
         </div>
     </div>
 </template>

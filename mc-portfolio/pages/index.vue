@@ -36,6 +36,4 @@ import Button from "~/components/reusable/Button.vue";
 import { ref } from 'vue';
 </script>
 
-<style scoped>
-/* Add any additional styles if needed */
-</style>
+<style scoped></style>

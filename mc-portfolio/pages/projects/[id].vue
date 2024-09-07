@@ -86,8 +86,8 @@
                                 class="text-blue-600 hover:underline">
                                 GitHub
                             </a>
-                            <a v-if="project.liveSite" :href="project.liveSite" target="_blank"
-                                class="text-blue-600 hover:underline">
+                            <a v-if="project.liveSite && project.liveSite !== 'Not Deployed'" :href="project.liveSite"
+                                target="_blank" class="text-blue-600 hover:underline">
                                 Live Site
                             </a>
                         </div>

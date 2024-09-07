@@ -18,9 +18,9 @@ export default defineNuxtConfig({
 
   // Nuxt modules
   modules: [
-    "@nuxt/ui",            // Nuxt UI components
-    "@nuxtjs/tailwindcss", // Tailwind CSS module
-    "@nuxtjs/color-mode",  // Dark mode support
+    '@nuxt/ui',            // Nuxt UI components
+    '@nuxtjs/tailwindcss', // Tailwind CSS module
+    '@nuxtjs/color-mode',  // Dark mode support
   ],
 
   // Global page headers
@@ -43,7 +43,7 @@ export default defineNuxtConfig({
 
   // Color mode configuration
   colorMode: {
-    classSuffix: "",
+    classSuffix: '',
   },
 
   // Auto import components

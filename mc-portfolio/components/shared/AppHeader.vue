@@ -8,8 +8,8 @@ const modal = ref(false);
 
 function themeSwitcher() {
     const colorMode = useColorMode();
-    colorMode.preference = colorMode.value === 'light' ? 'dark' : 'light';
-    console.log('Current color mode:', colorMode.value);
+    colorMode.preference = colorMode.value == 'light' ? 'dark' : 'light';
+    console.log(colorMode.preference);
 }
 
 function showModal() {
@@ -39,8 +39,9 @@ function showModal() {
                 <!-- Header logos -->
                 <div>
                     <NuxtLink to="/">
-                        <img v-if="$colorMode.value === 'dark'" src="/logo-light2.png" class="w-36" alt="Light Logo" />
-                        <img v-else src="/logo-dark2.png" alt="Color Logo" class="w-36" />
+                        <img v-if="$colorMode.value === 'dark'" src="/logo-dark.png" class="w-36" alt="Light Logo" />
+
+                        <img v-else src="/logo-light.png" alt="Color Logo" class="w-36" />
                     </NuxtLink>
                 </div>
 
