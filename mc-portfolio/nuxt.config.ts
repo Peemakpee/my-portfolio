@@ -8,6 +8,13 @@ export default defineNuxtConfig({
   // Global CSS files
   css: ['@/assets/app.css'],
 
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseKey: process.env.SUPABASE_KEY
+    }
+  },
+
   // PostCSS configuration
   postcss: {
     plugins: {

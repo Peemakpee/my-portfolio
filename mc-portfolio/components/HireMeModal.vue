@@ -46,9 +46,9 @@
                                 </button>
                             </div>
                             <div class="modal-body p-5 w-full h-full">
-                                <form @submit="(e) => e.preventDefault()" class="max-w-xl m-4 text-left">
+                                <form @submit.prevent="submitForm" class="max-w-xl m-4 text-left">
                                     <div class="mt-0">
-                                        <input class="
+                                        <input v-model="formData.name" class="
                                                 w-full
                                                 px-5
                                                 py-2
@@ -64,7 +64,7 @@
                                             aria-label="Name" />
                                     </div>
                                     <div class="mt-6">
-                                        <input class="
+                                        <input v-model="formData.email" class="
                                                 w-full
                                                 px-5
                                                 py-2
@@ -81,7 +81,7 @@
                                     </div>
                                     <div class="mt-6 relative">
                                         <div class="relative">
-                                            <select class="
+                                            <select v-model="formData.subject" class="
                                                     w-full
                                                     px-5
                                                     py-2
@@ -105,7 +105,7 @@
                                     </div>
 
                                     <div class="mt-6">
-                                        <textarea class="
+                                        <textarea v-model="formData.message" class="
                                                 w-full
                                                 px-5
                                                 py-2
@@ -140,7 +140,7 @@
                                 </form>
                             </div>
                             <div class="modal-footer mt-2 sm:mt-0 py-5 px-8 border0-t text-right">
-                                <Button title="Close" class="
+                                <button class="
                                         px-4
                                         sm:px-6
                                         py-2
@@ -153,7 +153,26 @@
                                         rounded-md
                                         focus:ring-1 focus:ring-indigo-900
                                         duration-500
-                                    " @click="showModal()" aria-label="Close Hire Me Modal" />
+                                    " @click="showModal()" aria-label="Close Hire Me Modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Success Modal -->
+                        <div v-if="showSuccessModal"
+                            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-md w-full">
+                                <p class="text-center text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+                                    Thank You!
+                                </p>
+                                <p class="text-center text-gray-600 dark:text-gray-400 mb-6">
+                                    Your message has been sent successfully. I appreciate your interest, looking forward
+                                    to connecting with you!
+                                </p>
+                                <div class="text-center">
+                                    <Button title="Close" @click="closeModal"
+                                        class="px-4 py-2 dark:bg-ternary-dark bg-secondary-dark text-white rounded-lg" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -166,8 +185,52 @@
 <script setup>
 import { useCategoryStore } from '@/stores/useCategoryStore';
 import { defineProps, onMounted, computed } from 'vue';
+import { createClient } from '@supabase/supabase-js';
 import feather from 'feather-icons';
 import Button from './reusable/Button.vue';
+
+const config = useRuntimeConfig();
+
+// Initialize Supabase client using Nuxt.js runtime config
+const supabase = createClient(
+    config.public.supabaseUrl,
+    config.public.supabaseKey
+);
+
+const formData = ref({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+});
+const showSuccessModal = ref(false);
+
+const submitForm = async () => {
+    try {
+        const { data, error } = await supabase
+            .from('contactform')
+            .insert([
+                {
+                    name: formData.value.name,
+                    email: formData.value.email,
+                    subject: formData.value.subject,
+                    message: formData.value.message
+                }
+            ]);
+
+        if (error) throw error;
+
+        console.log('Form submitted successfully:', data);
+        formData.value = { name: '', email: '', subject: '', message: '' };
+        showSuccessModal.value = true; // Show success modal
+    } catch (error) {
+        console.error('Error submitting form:', error);
+    }
+};
+
+const closeModal = () => {
+    showSuccessModal.value = false;
+};
 
 const store = useCategoryStore();
 const categories = computed(() => store.getCategories);
