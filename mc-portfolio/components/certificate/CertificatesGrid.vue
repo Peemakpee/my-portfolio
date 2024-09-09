@@ -60,35 +60,37 @@ onMounted(() => {
         <!-- Certificates grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
             <div v-for="certificate in filteredCertificates" :key="certificate.id" class="
-          rounded-xl
-          shadow-lg
-          hover:shadow-xl
-          cursor-pointer
-          dark:hover:shadow-secondary-dark
-          mb-10
-          sm:mb-0
-          bg-secondary-light
-          dark:bg-ternary-dark
-        " aria-label="Single Certificate">
-                <NuxtLink :to="`/certificate/${certificate.id}`">
-                    <div class="flex justify-center">
-                        <img :src="certificate.img" :alt="certificate.title" class="rounded-t-xl border-none" />
+        rounded-xl
+        shadow-lg
+        hover:shadow-xl
+        cursor-pointer
+        dark:hover:shadow-secondary-dark
+        mb-10
+        sm:mb-0
+        bg-secondary-light
+        dark:bg-ternary-dark
+        overflow-hidden
+      " aria-label="Single Certificate">
+                <NuxtLink :to="`/certificate/${certificate.id}`" class="block h-full">
+                    <div class="aspect-w-16 aspect-h-9 overflow-hidden">
+                        <img :src="certificate.img" :alt="certificate.title" class="w-full h-full object-cover"
+                            loading="lazy" />
                     </div>
                     <div class="text-center px-4 py-6">
                         <p class="
-                font-general-semibold
-                text-xl text-ternary-dark
-                dark:text-ternary-light
-                font-semibold
-                mb-2
-              ">
+              font-general-semibold
+              text-xl text-ternary-dark
+              dark:text-ternary-light
+              font-semibold
+              mb-2
+            ">
                             {{ certificate.title }}
                         </p>
                         <span class="
-                font-general-medium
-                text-lg text-ternary-dark
-                dark:text-ternary-light
-              ">{{ certificate.category }}</span>
+              font-general-medium
+              text-lg text-ternary-dark
+              dark:text-ternary-light
+            ">{{ certificate.category }}</span>
                     </div>
                 </NuxtLink>
             </div>
@@ -96,4 +98,21 @@ onMounted(() => {
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.aspect-w-16 {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+}
+
+.aspect-w-16>img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+</style>

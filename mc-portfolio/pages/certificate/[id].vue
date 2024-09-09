@@ -19,12 +19,12 @@ const lightboxOpen = ref(false);
 const lightboxImage = ref('');
 
 const openLightbox = (imageSrc) => {
-  lightboxImage.value = imageSrc;
-  lightboxOpen.value = true;
+    lightboxImage.value = imageSrc;
+    lightboxOpen.value = true;
 };
 
 const closeLightbox = () => {
-  lightboxOpen.value = false;
+    lightboxOpen.value = false;
 };
 
 onMounted(() => {
@@ -86,7 +86,8 @@ onUpdated(() => {
                     <div v-if="isOnlineCertification" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                         <div v-for="certificateImage in certificate.certificateImages" :key="certificateImage.id">
                             <img :src="certificateImage.img" :alt="certificate.title"
-                                class="w-full h-auto rounded-xl shadow-lg" loading="lazy" @click="openLightbox(certificateImage.img)" />
+                                class="w-full h-auto rounded-xl shadow-lg" loading="lazy"
+                                @click="openLightbox(certificateImage.img)" />
                         </div>
                     </div>
 
@@ -95,8 +96,8 @@ onUpdated(() => {
                         <div v-for="certificateImage in certificate.certificateImages" :key="certificateImage.id"
                             class="w-full sm:w-1/2 lg:w-1/3 p-2">
                             <img :src="certificateImage.img" :alt="certificate.title"
-                                class="w-full h-auto object-cover rounded-xl shadow-lg" style="max-height: 400px;"
-                                loading="lazy" @click="openLightbox(certificateImage.img)" />
+                                class="w-96 h-auto object-cover rounded-xl shadow-lg" loading="lazy"
+                                @click="openLightbox(certificateImage.img)" />
                         </div>
                     </div>
                 </div>
