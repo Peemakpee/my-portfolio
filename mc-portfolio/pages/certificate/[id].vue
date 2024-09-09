@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, onUpdated } from 'vue';
+import { ref, computed, onMounted, onUpdated } from 'vue';
 import { useRoute } from '#app';
 import { useCertificateStore } from '@/stores/useCertificateStore';
 import feather from 'feather-icons';
@@ -14,6 +14,18 @@ const certificate = computed(() => {
 const isOnlineCertification = computed(() => {
     return certificate.value?.category === 'Online Certification';
 });
+
+const lightboxOpen = ref(false);
+const lightboxImage = ref('');
+
+const openLightbox = (imageSrc) => {
+  lightboxImage.value = imageSrc;
+  lightboxOpen.value = true;
+};
+
+const closeLightbox = () => {
+  lightboxOpen.value = false;
+};
 
 onMounted(() => {
     feather.replace();
@@ -73,17 +85,26 @@ onUpdated(() => {
                     <!-- Check if the category is "Online Certification" -->
                     <div v-if="isOnlineCertification" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                         <div v-for="certificateImage in certificate.certificateImages" :key="certificateImage.id">
-                            <img :src="certificateImage.img" class="w-full h-auto rounded-xl shadow-lg" />
+                            <img :src="certificateImage.img" :alt="certificate.title"
+                                class="w-full h-auto rounded-xl shadow-lg" loading="lazy" @click="openLightbox(certificateImage.img)" />
                         </div>
                     </div>
 
                     <!-- Default flex layout for other categories -->
                     <div v-else class="flex flex-wrap justify-center gap-10">
-                        <div v-for="certificateImage in certificate.certificateImages" :key="certificateImage.id">
-                            <img :src="certificateImage.img" class="max-w-full h-auto rounded-xl shadow-lg" />
+                        <div v-for="certificateImage in certificate.certificateImages" :key="certificateImage.id"
+                            class="w-full sm:w-1/2 lg:w-1/3 p-2">
+                            <img :src="certificateImage.img" :alt="certificate.title"
+                                class="w-full h-auto object-cover rounded-xl shadow-lg" style="max-height: 400px;"
+                                loading="lazy" @click="openLightbox(certificateImage.img)" />
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div v-if="lightboxOpen" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+                @click="closeLightbox">
+                <img :src="lightboxImage" alt="Full size certificate" class="max-w-full max-h-full object-contain" />
             </div>
 
             <!-- Certificate info -->
