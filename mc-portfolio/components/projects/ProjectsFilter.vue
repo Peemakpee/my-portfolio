@@ -20,8 +20,14 @@ const emit = defineEmits(['change']);
 </script>
 
 <template>
-    <div class="relative">
-        <select @change="emit('change', $event.target.value)" :name="props.select" :id="props.select" class="
+    <div class="relative w-full sm:w-auto">
+        <select 
+            @change="emit('change', $event.target.value)" 
+            :name="props.select" 
+            :id="props.select" 
+            class="
+                w-full
+                sm:w-auto
                 font-general-medium
                 px-4
                 py-2
@@ -35,17 +41,24 @@ const emit = defineEmits(['change']);
                 text-primary-dark
                 dark:text-ternary-light
                 appearance-none
-                pr-9
-
-            ">
+                pr-10
+            "
+        >
             <option value class="text-sm sm:text-md">All Projects</option>
-            <option v-for="option in props.selectOptions" :key="option" :value="option" class="sm:text-md">
+            <option v-for="option in props.selectOptions" :key="option" :value="option" class="text-sm sm:text-md">
                 {{ option }}
             </option>
         </select>
         <i data-feather="chevron-down"
-            class="absolute right-3 top-5 transform -translate-y-1/2 text-gray-500 dark:text-gray-300 pointer-events-none"></i>
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-300 pointer-events-none"></i>
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped>
+@media (max-width: 640px) {
+    select {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+</style>
