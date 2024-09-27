@@ -14,7 +14,7 @@ export const useCertificateStore = defineStore('certificateStore', {
                 date: "July 13, 2023",
                 tag: "Information Technology Specialist",
                 skillTitle: "Skills",
-                detailsTitle: "About Project",
+                detailsTitle: "About Certification",
                 certificateImages: [
                     {
                         id: uuidv4(),
@@ -44,7 +44,7 @@ export const useCertificateStore = defineStore('certificateStore', {
                 date: "September 06, 2022",
                 tag: "TESDA National Certification",
                 skillTitle: "Skills",
-                detailsTitle: "About Project",
+                detailsTitle: "About Certification",
                 certificateImages: [
                     {
                         id: uuidv4(),
@@ -75,7 +75,7 @@ export const useCertificateStore = defineStore('certificateStore', {
                 date: "April 22, 2024",
                 tag: "Online Learning Achievements",
                 skillTitle: "Skills",
-                detailsTitle: "About Project",
+                detailsTitle: "About Certification",
                 certificateImages: [
                     {
                         id: uuidv4(),
